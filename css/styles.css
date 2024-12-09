@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+TAS&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Strike&family=Raleway:ital,wght@1,500&family=Ysabeau+Infant:ital,wght@1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+body{
+    background-color: white;
+}
+header{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    background-color: #1f4489;
+    /*height: 18vh;*/
+    nav{
+        padding: 5.5vh 3vh;
+        img{
+            width: 35vh;
+        }
+        ul{
+            li{
+                padding: 0vh 5vh;
+            }
+        }
+        .nav-link {
+            font-weight: 500;
+            color:white;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+            --bs-nav-link-hover-color: #fcc139;
+        }
+        .nav-underline .nav-link.active, .nav-underline .show>.nav-link {
+            font-weight: 500;
+            color: white;
+            border-bottom-color: #fcc139;
+            --bs-nav-underline-border-width: 0.3rem;
+        }
+        .nav-underline .nav-link {
+            padding-right: 0;
+            padding-left: 0;
+            --bs-nav-underline-border-width:.3rem;
+        }
+        .imgCarrito{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 3.5vh;
+            width: 7.5vh;
+            height: 7.5vh;
+            img{
+                width: 4vh;
+            }
+        }
+        .imgCarrito:hover{
+            background-color: #425d91;
+        }
+        .imgCarrito2{
+            display: none;
+        }
+    }
+    .navbar-collapse {
+        flex-grow: 0;
+    }
+    .navbar{
+        padding: 0vh 2vh;
+        margin: 0;
+        height: 100%;
+    }
+}
+main{
+    h2{
+        font-weight: 700;
+        color: #1f4489;
+    }
+    .carouselSec{
+        background-color: #1f4489;
+        margin: 0vh;
+        padding: 0vh 5vh 5vh 5vh;
+        /*Titulo y parrafo del carrousel*/
+        h1{
+            font-weight: 700;
+            color: #4c86f1;
+            span{
+                color: rgb(197, 58, 58);
+            }
+        }
+        p{
+            color: #ffffff;
+            font-size: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+    }
+    /*SECTION PRIMERA*/
+    .topPage{
+        padding: 5vh 5vh;
+    }
+    /*SECCION HISTORIA*/
+    .secHistoria{
+        padding: 10vh 5vh 5vh 5vh;
+    }
+    .historia{
+        padding-top: 5vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: .5fr .5fr .5fr;
+        grid-template-areas: "img lat1 lat1"
+                            "img lat1 lat1"
+                            "fin fin fin";
+        img{
+            width: 35vh;
+            object-fit: cover;
+        }
+        .alinHist{
+            padding: 0;
+            margin: 0;
+            p{
+                font-size: 1.2rem;
+                text-align: justify;
+            }
+        }
+        .itemh1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: img;
+        }
+        .itemh2{
+            grid-area: lat1;
+        }
+        .itemh3{
+            grid-area: fin;
+        }
+    }
+    /*SECCION PRODUCTOS DESTACADOS*/
+    .productosDest{
+        padding: 5vh 5vh 10vh 5vh;
+    }
+    .ventaDest{
+        padding-top: 5vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "remera buzo gorra";
+        /*.cardVenta{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 50vh;
+                height: 50vh;
+                object-fit: cover;
+            }
+            p{
+                font-size: 2rem;
+                font-weight: 700;
+                padding: 1vh 0vh;
+            }
+        }*/
+        .item1{
+            grid-area: remera;
+        }
+        .item2{
+            grid-area: buzo;
+        }
+        .item3{
+            grid-area: gorra;
+        }
+        .comprar{
+            text-decoration: none;
+            padding: 1.5vh 2vh;
+            border: .5vh solid #1f4489;
+            border-radius: 1vh;
+            color: #1f4489;
+            font-weight: 700;
+        }
+        .agregarCarrito{
+            text-decoration: none;
+            padding: 1.5vh 2vh;
+            border: .5vh solid #1f4489;
+            border-radius: 1vh;
+            background-color: #1f4489;
+            color: white;
+        }
+    }
+    /*TRAILERS*/
+    .estrenos{
+        padding: 5vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "v1 p1"
+                            "v2 p2"
+                            "v3 p3";
+        .item1{
+            grid-area: v1;
+        }
+        .item2{
+            grid-area: p1;
+        }
+        .item3{
+            grid-area: v2;
+        }
+        .item4{
+            grid-area: p2;
+        }
+        .item5{
+            grid-area: v3;
+        }
+        .item6{
+            grid-area: p3;
+        }
+        .textoPeli{
+            h3{
+                color: #1f4489;
+            }
+            p{
+                text-align: justify;
+            }
+        }
+        .frameVideo{
+            width: 560px; 
+            height: 315px;
+        }
+    }
+    /*FORMULARIO DE CONTACTO*/
+    .formularioCont{
+        padding: 5vh;
+        .espaciadoIn{
+            padding-bottom: 2vh;
+        }
+        .propForm{
+            padding: 5vh 10vh;
+        }
+    }
+    /*NOSOTROS*/
+    .nosotros{
+        padding: 0vh 5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 70vh;
+        }
+        p{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        div{
+            padding: 2vh 0vh;
+        }
+    }
+    /*TIENDA*/
+    .tiendaPrinc{
+        padding: 5vh;
+        padding-top: 0vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "remera buzo gorra"
+                            "pantalon tazas tarjeta";
+        .item1{
+            grid-area: remera;
+        }
+        .item2{
+            grid-area: buzo;
+        }
+        .item3{
+            grid-area: gorra;
+        }
+        .item4{
+            grid-area: pantalon;
+        }
+        .item5{
+            grid-area: tazas;
+        }
+        .item6{
+            grid-area: tarjeta;
+        }
+        .comprar{
+            text-decoration: none;
+            padding: 1.5vh 2vh;
+            border: .5vh solid #1f4489;
+            border-radius: 1vh;
+            color: #1f4489;
+            font-weight: 700;
+        }
+        .agregarCarrito{
+            text-decoration: none;
+            padding: 1.5vh 2vh;
+            border: .5vh solid #1f4489;
+            border-radius: 1vh;
+            background-color: #1f4489;
+            color: white;
+        }
+    }
+    .cardVenta{
+        padding-bottom: 5vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 50vh;
+            height: 50vh;
+            object-fit: cover;
+        }
+        p{
+            font-size: 2rem;
+            font-weight: 700;
+            padding: 1vh 0vh;
+        }
+    }
+}
+footer{
+    .footerProp{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #1f4489;
+        padding: 5vh;
+        img{
+            width: 50vh;
+        }
+        h4{
+            color: white;
+            font-weight: 700;
+        }
+        .redes{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .fa-whatsapp{
+            position: fixed;
+            font-size: 3em;
+            bottom: 12vh;
+            right: 3vh;
+        }
+        .fa-circle-chevron-up{
+            position: fixed;
+            font-size: 2.5em;
+            bottom: 3vh;
+            right: 3vh;
+        }
+        /*BARRA DE NAVEGACION DE FOOTER*/
+        .nav-underline .nav-link.active, .nav-underline .show>.nav-link {
+            font-weight: 500;
+            color: white;
+            border-bottom-color: #fcc139;
+            --bs-nav-underline-border-width: 0.3rem;
+        }
+        .nav-link {
+            font-weight: 500;
+            color:white;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+            --bs-nav-link-hover-color: #fcc139;
+        }
+        .nav-underline{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /*BOTON SUSCRIIBIRSE*/
+        .btn-outline-secondary {
+            --bs-btn-color: #fcc139;
+            --bs-btn-hover-bg: #fcc139;
+        }
+    }
+    .piePagina{
+        padding: 2vh;
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        background-color: #fcc139;
+    }
+}
+@media screen and (max-width: 767px){
+    header{
+        nav{
+            img{
+                width: 27vh;
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .imgCarrito{
+                display: none;
+            }
+            .imgCarrito2{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 3.5vh;
+                width: 7.5vh;
+                height: 7.5vh;
+                img{
+                    width: 4vh;
+                }
+            }
+            .navbar-toggler{
+                border: 0;
+            }
+            .container-fluid{
+                --bs-gutter-x:0;
+            }
+        }
+    }
+    main{
+        /*SECCION HISTORIA*/
+        .secHistoria{
+            padding: 2vh 1vh;
+        }
+        .historia{
+            padding-top: 1vh;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: .5fr .2fr .5fr;
+            grid-template-areas: "lat1"
+                                "img"
+                                "fin";
+            img{
+                width: 25vh;
+                transform: rotate(270deg);
+            }
+            .alinHist{
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+        /*PRODUCTOS DESTACADOS*/
+        .productosDest {
+            padding: 2vh 2vh;
+        }
+        .ventaDest{
+            padding-top: 2vh;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: "remera"
+                                "buzo"
+                                "gorra";
+        }
+        .cardVenta{
+            img{
+                width: 40vh;
+                height: 40vh;
+            }
+        }
+        /*TRAILERS*/
+        .topPage {
+            padding: 2vh;
+        }
+        .estrenos{
+            padding: 0vh 1vh;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: .5fr .5fr .5fr .5fr .5fr .5fr;
+            grid-template-areas:"p1"
+                                "v1"
+                                "p2"
+                                "v2"
+                                "p3"
+                                "v3";
+                                
+            .frameVideo{
+                width: 320px; 
+                height: 250px;
+            }
+            .textoPeli {
+                padding-top: 5vh;
+            }
+        }
+        /*TIENDA*/
+        .tiendaPrinc{
+            padding: 2vh;
+            grid-template-columns: 1fr;
+            grid-template-rows: .5fr .5fr .5fr .5fr .5fr .5fr;
+            grid-template-areas: "remera"
+                                "buzo"
+                                "gorra"
+                                "pantalon"
+                                "tazas"
+                                "tarjeta";
+        }
+        /*CONTACTO*/
+        .formularioCont{
+            padding: 2vh;
+            .espaciadoIn{
+                padding-bottom: 0;
+            }
+            .espaciadoCel{
+                padding-bottom: 2vh;
+            }
+            .propForm{
+                padding: 2vh;
+            }
+        }
+    }
+    footer{
+        .navFooter{
+            display: none;
+        }
+        .footerProp {
+            flex-direction: column;
+            justify-content: center;
+            padding: 2vh;
+            img {
+                width: 40vh;
+            }
+            .redes {
+                padding: 2vh 1vh;
+            }
+        }
+    }
+}
