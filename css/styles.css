@@ -474,6 +474,10 @@ footer{
             .textoPeli {
                 padding-top: 5vh;
             }
+            .item1 .item3 .item5{
+                display: flex;
+                justify-content: center;
+            }
         }
         /*TIENDA*/
         .tiendaPrinc{
