@@ -49,24 +49,24 @@
                 <form class="form-floating propForm">
                     <div class="row g-2">
                         <div class="form-floating col-md espaciadoIn">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="Nombre">
-                            <label for="floatingInput">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                            <label for="nombre">Nombre</label>
                         </div>
                         <div class="form-floating col-md espaciadoCel">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="Apellido">
-                            <label for="floatingInput">Apellido</label>
+                            <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+                            <label for="apellido">Apellido</label>
                         </div>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                        <label for="floatingInput">Direccion de E-mail</label>
+                        <input type="email" class="form-control" id="mail" placeholder="name@example.com" required>
+                        <label for="mail">Direccion de E-mail</label>
                     </div>
                     <div class="form-floating espaciadoIn">
-                        <textarea class="form-control" placeholder="Ingrese su mensaje aqui" id="floatingTextarea2" style="height: 150px"></textarea>
-                        <label for="floatingTextarea2">Ingrese su consulta</label>
+                        <textarea class="form-control" id="consulta" placeholder="Ingrese su mensaje aqui" style="height: 150px"></textarea>
+                        <label for="consulta">Ingrese su consulta</label>
                     </div>
                     <div class="d-grid gap-2 d-md-block">
-                        <button class="btn btn-primary" type="submit">Enviar Formulario</button>
+                        <button class="btn btn-primary" type="submit" onclick="enviarForm()">Enviar Formulario</button>
                         <button class="btn btn-primary" type="reset">Borrar Todo</button>
                     </div>
                 </form>
@@ -113,6 +113,7 @@
                 <a href="https://github.com/Jamoverflow1982" target="_blank">Pagina creada por Javier Monzon</a>
             </div>
         </footer>
+    <script src="../js/formulario.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
