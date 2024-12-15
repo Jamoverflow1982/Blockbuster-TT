@@ -142,6 +142,7 @@ main{
             left: 0;
             bottom: 0vh;
             background-color: #ffffff;
+            line-height: auto;
             font-size: 1.2rem;
             color: #1f4489;
             border-color: #1f4489;
