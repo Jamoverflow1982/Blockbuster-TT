@@ -137,6 +137,7 @@ main{
         padding: 5vh 5vh 10vh 5vh;
         .alertaCarrito{
             z-index: 1000;
+            height: auto;
             width: 100%;
             left: 0;
             bottom: 0vh;
