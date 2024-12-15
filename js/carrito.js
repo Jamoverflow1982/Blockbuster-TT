@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const tablaCarrito = document.getElementById("tablaCarrito");
     const totalCarrito = document.getElementById("totalCarrito");
+    const botonesC = document.getElementById("botonesC");
 
     // Obtener carrito de localStorage
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -22,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
             fila.innerHTML = `
                 <td>${producto.producto}</td>
                 <td>$${producto.precio}</td>
-                <td>
-                    <button class="btn btn-danger btn-sm" data-index="${index}">Eliminar</button>
+                <td class="accionCentro">
+                    <button class="btn btn-danger btn-sm" data-index="${index}">Quitar</button>
                 </td>
             `;
             tablaCarrito.appendChild(fila);
@@ -50,5 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
     
+    botonesC.addEventListener("click", (event2) => {
+        if (event2.target.id === "vaciarCarrito") {
+            carrito.length = 0;
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            renderizarCarrito();
+        }
+    });
+
     renderizarCarrito();
+
 });

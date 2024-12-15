@@ -51,9 +51,9 @@
                 <table class="table table-primary">
                     <thead>
                         <tr>
-                            <th>Producto</th>
-                            <th>Precio</th>
-                            <th></th>
+                            <th class="tablaTitulo">Producto</th>
+                            <th class="tablaTitulo">Precio</th>
+                            <th class="tablaTitulo accionCentro">Acción</th>
                         </tr>
                     </thead>
                     <tbody id="tablaCarrito">
@@ -62,6 +62,11 @@
                 </table>
                 <div class="mt-3">
                     <h3>Total: $<span id="totalCarrito">0.00</span></h3>
+                </div>
+                <div class="botonesCarrito" id="botonesC">
+                    <button id="comprarCarrito" class="btn btn-success">Comprar</button>
+                    <button id="vaciarCarrito" class="btn btn-danger">Vaciar Carrito</button>
+                    <a href="../pages/tienda.html" class="btn btn-primary">Seguir Comprando</a>
                 </div>
             </section>
         </main>

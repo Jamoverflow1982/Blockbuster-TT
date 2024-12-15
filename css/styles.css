@@ -350,6 +350,22 @@ main{
             color: #1f4489;
         }
     }
+    .tablaTitulo{
+        background-color: #1f4489;
+        color: #ffffff;
+    }
+    .accionCentro{
+        text-align: center;
+    }
+    .botonesCarrito{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2vh 0vh;
+        .btn{
+            margin: 0vh 1vh;
+        }
+    }
 }
 footer{
     .footerProp{
