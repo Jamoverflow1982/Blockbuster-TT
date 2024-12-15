@@ -47,6 +47,23 @@
             <section  class="topPage">
                 <h2>Carrito de Compras</h2>
             </section>
+            <section class="container">
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaCarrito">
+                        <!-- Filas dinámicas -->
+                    </tbody>
+                </table>
+                <div class="mt-3">
+                    <h3>Total: $<span id="totalCarrito">0.00</span></h3>
+                </div>
+            </section>
         </main>
         <footer>
             <div class="footerProp">
@@ -62,7 +79,7 @@
                             <a class="nav-link" href="../pages/trailers.html">TRAILERS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../pages/contacto.html">TIENDA</a>
+                            <a class="nav-link" href="../pages/tienda.html">TIENDA</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
@@ -89,6 +106,7 @@
                 <a href="https://github.com/Jamoverflow1982" target="_blank">Pagina creada por Javier Monzon</a>
             </div>
         </footer>
-    <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/carrito.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

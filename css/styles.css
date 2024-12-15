@@ -132,9 +132,33 @@ main{
             grid-area: fin;
         }
     }
-    /*SECCION PRODUCTOS DESTACADOS*/
-    .productosDest{
+    /*SECCION PRODUCTOS DESTACADOS Y TIENDA*/
+    .productosDest, .tienda{
         padding: 5vh 5vh 10vh 5vh;
+        .alertaCarrito{
+            z-index: 1000;
+            width: 100%;
+            left: 0;
+            bottom: 0vh;
+            background-color: #ffffff;
+            font-size: 1.2rem;
+            color: #1f4489;
+            border-color: #1f4489;
+            border-width: 0.5vh;
+            position:fixed;
+            text-align: center;
+        }
+        .carritoLink{
+            padding: 1.2vh 4vh;
+            text-decoration: none;
+            background-color: #19bd19;
+            color: white;
+            border-radius: 1vh;
+            box-shadow: 10px 10px 6px -1px rgba(73,78,242,0.44);
+        }
+    }
+    .tienda{
+        padding: 0;
     }
     .ventaDest{
         padding-top: 5vh;
@@ -311,6 +335,18 @@ main{
             font-weight: 700;
             padding: 1vh 0vh;
         }
+        .smallCarrito{
+            font-size: 1rem;
+            color: #1f4489;
+        }
+    }
+    /*VALOR TOTAL DE CARRITO*/
+    .mt-3{
+        span{
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #1f4489;
+        }
     }
 }
 footer{
@@ -481,7 +517,7 @@ footer{
         }
         /*TIENDA*/
         .tiendaPrinc{
-            padding: 2vh;
+            padding: 1vh;
             grid-template-columns: 1fr;
             grid-template-rows: .5fr .5fr .5fr .5fr .5fr .5fr;
             grid-template-areas: "remera"
@@ -490,6 +526,9 @@ footer{
                                 "pantalon"
                                 "tazas"
                                 "tarjeta";
+        }
+        .tienda{
+            padding: 0;
         }
         /*CONTACTO*/
         .formularioCont{

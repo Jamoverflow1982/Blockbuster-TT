@@ -94,8 +94,8 @@
                         <h3>Remera blanca</h3>
                         <p>$12.490</p>
                         <div>
-                            <a class="comprar" href="">COMPRAR</a>
-                            <a class="agregarCarrito" href="">AGREGAR AL CARRITO</a>
+                            <a id="comprarRemera" data-nombre="Remera Blockbuster" data-precio="12490" class="comprar" href="">COMPRAR</a>
+                            <a id="agregarRemera" data-nombre="Remera Blockbuster" data-precio="12490" class="agregarCarrito" href="">AGREGAR AL CARRITO</a>
                         </div>
                     </div>
                     <div class="item2 cardVenta">
@@ -103,8 +103,8 @@
                         <h3>Buzo Blockbuster azul</h3>
                         <p>$35.500</p>
                         <div>
-                            <a class="comprar" href="">COMPRAR</a>
-                            <a class="agregarCarrito" href="">AGREGAR AL CARRITO</a>
+                            <a id="comprarBuzo" data-nombre="Buzo Blockbuster" data-precio="35500" class="comprar" href="">COMPRAR</a>
+                            <a id="agregarBuzo" data-nombre="Buzo Blockbuster" data-precio="35500" class="agregarCarrito" href="">AGREGAR AL CARRITO</a>
                         </div>
                     </div>
                     <div class="item3 cardVenta">
@@ -112,11 +112,12 @@
                         <h3>Gorra trucker azul</h3>
                         <p>$14.200</p>
                         <div>
-                            <a class="comprar" href="">COMPRAR</a>
-                            <a class="agregarCarrito" href="">AGREGAR AL CARRITO</a>
+                            <a id="comprarGorra" data-nombre="Gorra Blockbuster" data-precio="14200" class="comprar" href="">COMPRAR</a>
+                            <a id="agregarGorra" data-nombre="Gorra Blockbuster" data-precio="14200" class="agregarCarrito" href="">AGREGAR AL CARRITO</a>
                         </div>
                     </div>
                 </div>
+                <div class="alertaCarrito alert alert-primary d-none" role="alert" id="alertCarrito"></div>
             </section>
         </main>
         <footer>
@@ -133,7 +134,7 @@
                             <a class="nav-link" href="./pages/trailers.html">TRAILERS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/contacto.html">TIENDA</a>
+                            <a class="nav-link" href="./pages/tienda.html">TIENDA</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./pages/nosotros.html">NOSOTROS</a>
@@ -160,6 +161,7 @@
                 <a href="https://github.com/Jamoverflow1982" target="_blank">Pagina creada por Javier Monzon</a>
             </div>
         </footer>
+        <script src="./js/agregar.js"></script>
         <script src="./js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

@@ -1,36 +1,57 @@
-function enviarForm(){
-    console.log("Ingreso a la funcion validacion")
-    let cont = 0;
-    let nombreF = document.getElementById('nombre');
-    nombreF = nombreF.value;
-    if (nombreF===""){
-        alert("Falta SU Nombre!");
-        cont++;
-    };
+const formulario = document.getElementById("formulario");
+console.log(formulario);
 
-    let apellidoF = document.getElementById('apellido');
-    apellidoF = apellidoF.value;
-    if (apellidoF===""){
-        alert("Falta SU Apellido!");
-        cont++;
-    };
+formulario.addEventListener("submit", (e) => {
+    e.preventDefault(); //previene el envio del formulario
+    console.log("enviando formulario");
 
-    let mailF = document.getElementById('mail');
-    mailF = mailF.value;
-    if (mailF===""){
-        alert("Falta SU Mail!");
-        cont++;
-    };
+    const nombre = document.getElementById("nombre").value.trim();//trim elimina los espacios en blanco
+    const apellido = document.getElementById("apellido").value.trim();    
+    const mail = document.getElementById("mail").value.trim();
+    const consulta = document.getElementById("consulta").value.trim();
 
-    let consultaF = document.getElementById('consulta');
-    consultaF = consultaF.value;
-    if (consultaF===""){
-        alert("No escribió ninguna consulta!");
-        cont++;
-    };
+    console.log("Nombre: " + nombre);
+    console.log("Apellido: " + apellido);
+    console.log("Mail: " + mail);
+    console.log("Consulta: " + consulta);
 
-    if (cont==0){alert(nombreF+" SU FORMULARIO FUE ENVIADO CORRECTAMENTE!!!");}
+    const errorNombre = document.getElementById("errorNombre");//Recibe el id y lo guarda en una variable
+    const errorApellido = document.getElementById("errorApellido");
+    const errorMail = document.getElementById("errorMail");
+    const errorConsulta = document.getElementById("errorConsulta");
 
-    console.log("Nombre: "+nombreF+" Apellido: "+apellidoF+" Mail: "+mailF);
-    console.log("Comentario: "+consultaF);
-}
+    let formularioOk = true;//Variable para validar el formulario
+
+    //Validaciones que no esten vacios los campos
+    if (nombre == "") {
+        errorNombre.classList.remove("d-none");
+        formularioOk = false;
+    } else {
+        errorNombre.classList.add("d-none");
+    }
+
+    if (apellido == "") {
+        errorApellido.classList.remove("d-none");
+        formularioOk = false;
+    } else {
+        errorApellido.classList.add("d-none");
+    }
+
+    if (mail == "") {
+        errorMail.classList.remove("d-none");
+        formularioOk = false;
+    } else {
+        errorMail.classList.add("d-none");
+    }
+
+    if (consulta == "") {
+        errorConsulta.classList.remove("d-none");
+        formularioOk = false;
+    } else {        
+        errorConsulta.classList.add("d-none");
+    }
+
+    if (formularioOk) {
+        alert("Formulario Enviado");
+    }
+});
