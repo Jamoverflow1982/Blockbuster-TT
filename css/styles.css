@@ -361,9 +361,10 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         padding: 2vh 0vh;
         .btn{
-            margin: 0vh 1vh;
+            margin: 1vh 1vh;
         }
     }
 }
